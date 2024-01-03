@@ -126,7 +126,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+   MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -155,25 +155,29 @@ class _MyHomePageState extends State<MyHomePage> {
     return
       Center(
       child:Container(
-            width: 600,
-            height: 400,
+            // width: 600,
+            // height: 400,
 
 
-            child:GridView.count(crossAxisCount: 2,
+            child:GridView.count(childAspectRatio: 20/3,
+
+                crossAxisCount: 2,
             children: [
               TextField(decoration:InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))) ,),
-              TextField(decoration:InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))) ,),
-              TextField(decoration:InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))) ,),
-              TextField(decoration:InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))) ,),
-              TextField(decoration:InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))) ,),
-              TextField(decoration:InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))) ,),
-              FilledButton(onPressed: (){
 
-BorderRadius.circular(5);
+              TextField(decoration:InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))) ,),
+              TextField(decoration:InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))) ,),
+              TextField(decoration:InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))) ,),
+              TextField(decoration:InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))) ,),
+              TextField(decoration:InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))) ,),
+              Center(
+              child:FilledButton(onPressed: (){
+
+
               }, child: Text("Submit")),
 
 
-
+              ),
             ]),
 
       ),
