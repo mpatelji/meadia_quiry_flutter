@@ -141,15 +141,22 @@ class _MyHomePageState extends State<MyHomePage> {
     var screenWidth =MediaQuery.of(context).size.width;
     var screenHeight =MediaQuery.of(context).size.height;
     return  Scaffold(
+      appBar: AppBar(
+        title: Text("Media Query"),
+        backgroundColor: Colors.blueGrey,
+      ),
         body: screenWidth>=467 ? tabletHomePage(screenWidth,screenHeight ) : phoneHomePage(screenWidth, screenHeight)// else part
 
     );
   }
 
   Widget tabletHomePage(double screenWidth, double screenHeight,){
-    return Container(
-            // width: 400,
-            // height: 200,
+
+    return
+      Center(
+      child:Container(
+            width: 600,
+            height: 400,
 
 
             child:GridView.count(crossAxisCount: 2,
@@ -160,10 +167,16 @@ class _MyHomePageState extends State<MyHomePage> {
               TextField(decoration:InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))) ,),
               TextField(decoration:InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))) ,),
               TextField(decoration:InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))) ,),
+              FilledButton(onPressed: (){
+
+BorderRadius.circular(5);
+              }, child: Text("Submit")),
+
+
 
             ]),
 
-
+      ),
       );
 
   }
